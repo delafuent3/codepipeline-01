@@ -3,6 +3,16 @@
     "Resources": {
         "S3Bucket": {
             "Type": "AWS::S3::Bucket"
+        },
+        "myVPC" : {
+            "Type" : "AWS::EC2::VPC",
+            "Properties" : {
+                "CidrBlock" : "10.0.0.0/16",
+                "EnableDnsSupport" : "false",
+                "EnableDnsHostnames" : "false",
+                "InstanceTenancy" : "dedicated",
+                "Tags" : [ {"Key" : "stack", "Value" : "production"} ]
+            }
         }
     },
     "Outputs": {
