@@ -105,6 +105,29 @@
             ],
             "Resource": "*",
             "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "codestar-connections:UseConnection"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "appconfig:StartDeployment",
+                "appconfig:GetDeployment",
+                "appconfig:StopDeployment"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "codecommit:GetRepository"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
         }
     ],
     "Version": "2012-10-17"
